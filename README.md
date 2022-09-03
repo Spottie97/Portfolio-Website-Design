@@ -2,9 +2,16 @@
 This is the code I used to create my Portfolio Website. Credit to <a href =https://www.youtube.com/channel/UCObrjoZZJSjznfCO5Vx9qUQ> Webdecoded </a> for teaching me to use Node.js and React.
 
 # What did I use?
--Node.js
--React
--Bootstrap
+  - Node.js
+  - React
+  - Bootstrap
+
+# How to install Node.js and React.
+  - Download the installer <a href =https://nodejs.org/en/download>here </a>
+  - Run the installation(It will open command shell and install everything).
+  - Once its done run the following command to see if it installed correctly "node -v" you should be prompted by the version. Now run "npm -v" which will again prompt you with the version.
+  - You can now run the command "npx create-react-app my-app" ("my-app" would be the name of the folder/project)
+  - I would recommend following the tutorial from <a href =https://youtu.be/hYv6BM2fWd8>here </a>.
 
 # The point of this project?
   I am trying to learn Node.js and some other frontend tools. I was also interested in creating this website to showcase my     projects in the future and to help advertise my work.
