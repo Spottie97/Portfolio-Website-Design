@@ -1,3 +1,7 @@
+# MY PORTFOLIO WEBSITE
+This is the code behind my portfolio website. I learn't everything regarding Node.js and React from <a href = https://youtu.be/hYv6BM2fWd8>here</a>.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
