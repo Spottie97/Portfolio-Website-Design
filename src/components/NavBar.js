@@ -48,7 +48,6 @@ export const NavBar = () => {
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
-                    //Add socials here
                     <a href='https://www.linkedin.com/in/reinhardt-erasmus-48076921a/'><img src={navIcon1} alt=""/></a>
                     <a href='https://twitter.com/ttvspottie'><img src={navIcon2} alt=""/></a>
                     <a href='https://www.instagram.com/young_but_beardless/'><img src={navIcon3} alt=""/></a>
