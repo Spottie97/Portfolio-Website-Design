@@ -6,7 +6,8 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import TrackVisibility from "react-on-screen";
-import 'animate.css';
+import "animate.css";
+
 export const Projects = () => {
 
     const projects = [
@@ -39,74 +40,68 @@ export const Projects = () => {
             title: "Project 6 ",
             description: " ",
             imgUrl: projImg3,
-        }
-
+        },
     ];
 
     return (
         <section className="project" id="project">
             <Container>
                 <Row>
-                    <Col size={12}>
+                    <Col>
                         <TrackVisibility>
-                            {({isVisible}) =>
-                         <div className={isVisible ? "animate_animated animate__bounceIn" : ""}>
-                            <h2>Projects</h2>
-                            <p>Behold...my adventures lay ahead, but be warned..the path you seek to follow contains many trials and tribulation. Enter at your own risk.</p>
-                         </div>}
+                            {({ isVisible }) =>
+                                <div
+                                    className={
+                                        isVisible ? "animate_animated animate__bounceIn" : ""
+                                    }
+                                >
+                                    <h2>Projects</h2>
+                                    <p>
+                                        Behold...my adventures lay ahead, but be warned..the path
+                                        you seek to follow contains many trials and tribulation.
+                                        Enter at your own risk.
+                                    </p>
+                                    <Tab.Container id="project-tabs" defaultActiveKey="first">
+                                        <Nav
+                                            variant="pills"
+                                            className="nav-pills md-5 justify-content-center align-item-center"
+                                            id="pills-tab"
+                                        >
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="first">C++ Project</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="second">C# Project</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="third">2D Mini Games</Nav.Link>
+                                            </Nav.Item>
+                                        </Nav>
+                                        <Tab.Content
+                                            id="slideInUp"
+                                            className={
+                                                isVisible ? "animate__animated animate__slideInUp" : ""
+                                            }
+                                        >
+                                            <Tab.Pane eventKey="first">
+                                                <Row>
+                                                    {projects.map((project, index) => {
+                                                        return <ProjectCard key={index} {...project} />;
+                                                    })}
+                                                </Row>
+                                            </Tab.Pane>
+                                            <Tab.Pane eventKey="second"><p>LoL</p></Tab.Pane>
+                                            <Tab.Pane eventKey="third">
+                                                <Row>
+                                                    {projects.map((project, index) => {
+                                                        return <ProjectCard key={index} {...project} />;
+                                                    })}
+                                                </Row>
+                                            </Tab.Pane>
+                                        </Tab.Content>
+                                    </Tab.Container>
+                                </div>}
                         </TrackVisibility>
-                      <Tab.Container id="project-tabs" defaultActiveKey="first">
-                        <Nav variant="pills" className="nav-pills md-5 justify-content-center align-item-center" id="pills-tab">
-                            <Nav.Item>
-                                <Nav.Link eventKey="first">C++ Project</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="second">C# Project</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="third">2D Mini Games</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                        <Tab.Content>
-                            <Tab.Pane eventKey="first">
-                                <Row>
-                                    {
-                                        projects.map((project, index) =>{
-                                            return(
-                                                <ProjectCard 
-                                                 key={index}
-                                                  {...project}/>
-                                            )
-                                        })
-                                    }
-                                </Row>
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="second">
-                                <Row>
-                                    {
-                                        projects.map((project, index) =>{
-                                            return(
-                                                <ProjectCard key={index}
-                                                {...project}/>
-                                            )
-                                        })
-                                    }
-                                </Row>
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="third">
-                                <Row>
-                                    {
-                                        projects.map((project, index) =>{
-                                            return(
-                                                <ProjectCard key={index}
-                                                {...project}/>
-                                            )
-                                        })
-                                    }
-                                </Row>
-                            </Tab.Pane>
-                        </Tab.Content>
-                     </Tab.Container>
                     </Col>
                 </Row>
             </Container>
