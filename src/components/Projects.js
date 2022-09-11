@@ -9,17 +9,17 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: " ",
+            title: "Project 1",
             description: " ",
             imgUrl: projImg1,
         },
         {
-            title: " ",
+            title: "Project 2",
             description: " ",
             imgUrl: projImg2,
         },
         {
-            title: " ",
+            title: "Project 3",
             description: " ",
             imgUrl: projImg3,
         },
@@ -48,7 +48,7 @@ export const Projects = () => {
                         Behold...my adventures lay ahead, but be warned..the path you seek to follow contains many trials and tribulation. Enter at your own risk.
                      </p>
                      <Tab.Container id="project-tabs" defaultActiveKey="first">
-                        <Nav variant="pills" defaultActiveKey="/home">
+                        <Nav variant="pills" className="nav-pills md-5 justify-content-center align-item-center" id="pills-tab">
                             <Nav.Item>
                                 <Nav.Link eventKey="first">C++ Project</Nav.Link>
                             </Nav.Item>
@@ -97,7 +97,6 @@ export const Projects = () => {
                                 </Row>
                             </Tab.Pane>
                         </Tab.Content>
-                        
                      </Tab.Container>
                      
                     </Col>
