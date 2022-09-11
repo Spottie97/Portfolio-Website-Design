@@ -53,13 +53,13 @@ export const Banner = () => {
                 <Row className ="align-item-center">
                     <Col xs={12} md={6} xl={7}>
                         <TrackVisibility>
-                        {( {isVisible}) =>
-                        <div className={isVisible ? "animate_animated animate__fadeInDownBig" : ""}>
+                            {( {isVisible}) =>
+                         <div className={isVisible ? "animate_animated animate__bounceIn" : ""}>
                             <span className="tagline">Welcome to my Portfolio</span>
                             <h1>{`I'm Reinhardt Erasmus: `}<span className="wrap">{text}</span></h1>
                             <p>Welcome to the inner workings of my mind, sit back and relax as I take you on an adventure of discovery, magic and mystery. Where to start? Ahh yes.. In a hole in the ground lived a game developer. Not just any game developer, this particular one had a dream, a dream to one day be one of the greatest of his kind. </p>
                             <button onClick={()=> console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
-                        </div>}
+                         </div>}
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>

@@ -47,19 +47,15 @@ export const Projects = () => {
         <section className="project" id="project">
             <Container>
                 <Row>
-                    <Col>
-                    <TrackVisibility>
-                    {({isVisible}) =>
-                        <div className={isVisible ? "animate_animated animate__lightSpeedInRight" : ""}>
-                     <h2>
-                        Projects
-                     </h2>
-                     <p>
-                        Behold...my adventures lay ahead, but be warned..the path you seek to follow contains many trials and tribulation. Enter at your own risk.
-                     </p>
-                     </div>}
-                     </TrackVisibility>
-                     <Tab.Container id="project-tabs" defaultActiveKey="first">
+                    <Col size={12}>
+                        <TrackVisibility>
+                            {({isVisible}) =>
+                         <div className={isVisible ? "animate_animated animate__bounceIn" : ""}>
+                            <h2>Projects</h2>
+                            <p>Behold...my adventures lay ahead, but be warned..the path you seek to follow contains many trials and tribulation. Enter at your own risk.</p>
+                         </div>}
+                        </TrackVisibility>
+                      <Tab.Container id="project-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills md-5 justify-content-center align-item-center" id="pills-tab">
                             <Nav.Item>
                                 <Nav.Link eventKey="first">C++ Project</Nav.Link>
