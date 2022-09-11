@@ -1,6 +1,6 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import spellbannerProject from "../assets/img/spell-banner.png";
+import spellbannerProject from "../assets/img/circle-spell-banner.png";
 //Image imports
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
@@ -98,11 +98,9 @@ export const Projects = () => {
                             </Tab.Pane>
                         </Tab.Content>
                      </Tab.Container>
-                     
                     </Col>
                 </Row>
             </Container>
-            <img className="spell-banner-project" src={spellbannerProject}></img>
         </section>
 
     )
