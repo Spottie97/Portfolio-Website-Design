@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/wizard-header.png";
-/*import 'animate.css';
-import TrackVisibility from 'react-on-screen'; */
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+import { isVisible } from "@testing-library/user-event/dist/utils";
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -51,10 +52,15 @@ export const Banner = () => {
             <Container>
                 <Row className ="align-item-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`I'm Reinhardt Erasmus: `}<span className="wrap">{text}</span></h1>
-                        <p>Welcome to the inner workings of my mind, sit back and relax as I take you on an adventure of discovery, magic and mystery. Where to start? Ahh yes.. In a hole in the ground lived a game developer. Not just any game developer, this particular one had a dream, a dream to one day be one of the greatest of his kind. </p>
-                        <button onClick={()=> console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
+                        <TrackVisibility>
+                        {( {isVisible}) =>
+                        <div className={isVisible ? "animate_animated animate__fadeInDownBig" : ""}>
+                            <span className="tagline">Welcome to my Portfolio</span>
+                            <h1>{`I'm Reinhardt Erasmus: `}<span className="wrap">{text}</span></h1>
+                            <p>Welcome to the inner workings of my mind, sit back and relax as I take you on an adventure of discovery, magic and mystery. Where to start? Ahh yes.. In a hole in the ground lived a game developer. Not just any game developer, this particular one had a dream, a dream to one day be one of the greatest of his kind. </p>
+                            <button onClick={()=> console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
+                        </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src ={headerImg} alt="Header Img"/>

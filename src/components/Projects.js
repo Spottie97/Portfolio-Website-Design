@@ -5,6 +5,8 @@ import spellbannerProject from "../assets/img/circle-spell-banner.png";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import TrackVisibility from "react-on-screen";
+import 'animate.css';
 export const Projects = () => {
 
     const projects = [
@@ -24,14 +26,19 @@ export const Projects = () => {
             imgUrl: projImg3,
         },
         {
-            title: " ",
+            title: "Project 4 ",
             description: " ",
-           // imgUrl: projImg1,
+            imgUrl: projImg1,
         },
         {
-            title: " ",
+            title: "Project 5 ",
             description: " ",
-           // imgUrl: projImg1,
+            imgUrl: projImg2,
+        },
+        {
+            title: "Project 6 ",
+            description: " ",
+            imgUrl: projImg3,
         }
 
     ];
@@ -41,12 +48,17 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col>
+                    <TrackVisibility>
+                    {({isVisible}) =>
+                        <div className={isVisible ? "animate_animated animate__lightSpeedInRight" : ""}>
                      <h2>
                         Projects
                      </h2>
                      <p>
                         Behold...my adventures lay ahead, but be warned..the path you seek to follow contains many trials and tribulation. Enter at your own risk.
                      </p>
+                     </div>}
+                     </TrackVisibility>
                      <Tab.Container id="project-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills md-5 justify-content-center align-item-center" id="pills-tab">
                             <Nav.Item>
@@ -65,8 +77,9 @@ export const Projects = () => {
                                     {
                                         projects.map((project, index) =>{
                                             return(
-                                                <ProjectCard key={index}
-                                                {...project}/>
+                                                <ProjectCard 
+                                                 key={index}
+                                                  {...project}/>
                                             )
                                         })
                                     }
