@@ -1,3 +1,14 @@
+# Portfolio Website Designs/Concepts
+## Goal of Project
+The goal of this project was to learn JavaScript, CSS and HTML and combine these languages to create a Portfolio Website I can use to showcase my C++ and C# work. This is the first concept. I used a video from <a href="https://youtu.be/hYv6BM2fWd8?list=PLwFQ9oM4JrymxbRf3GQRH6lD-I4GYxrhi">webdecoded</a> to build this website and teach me some of the basics of web development.
+
+## What Languages was used:
+ - Javascript
+ - CSS
+ - HTML
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
