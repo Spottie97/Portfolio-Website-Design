@@ -15,6 +15,7 @@ export const Projects = () => {
             title: "Project 1",
             description: " ",
             imgUrl: projImg1,
+            
         },
         {
             title: "Project 2",
